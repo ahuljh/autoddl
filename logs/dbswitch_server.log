@@ -1239,3 +1239,19 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2022-09-22 16:15:16.039 [http-nio-9088-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-09-22 16:15:16.040 [http-nio-9088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2022-09-22 16:15:16.054 [http-nio-9088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2022-09-22 18:00:40.105 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-22 18:42:56.254 [main] INFO  com.gitee.dbswitch.admin.AdminApplication - Starting AdminApplication on liujinhui with PID 13596 (D:\工作用\dbswitch-master\dbswitch-admin\target\classes started by liujinhui in D:\工作用\dbswitch-master)
+2022-09-22 18:42:56.259 [main] INFO  com.gitee.dbswitch.admin.AdminApplication - No active profile set, falling back to default profiles: default
+2022-09-22 18:42:58.440 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9088 (http)
+2022-09-22 18:42:58.451 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9088"]
+2022-09-22 18:42:58.452 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-22 18:42:58.452 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-09-22 18:42:58.579 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-22 18:42:58.580 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2253 ms
+2022-09-22 18:42:59.339 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-22 18:42:59.505 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9088"]
+2022-09-22 18:42:59.541 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9088 (http) with context path ''
+2022-09-22 18:42:59.609 [main] INFO  com.gitee.dbswitch.admin.AdminApplication - Started AdminApplication in 3.926 seconds (JVM running for 5.844)
+2022-09-22 18:43:07.591 [http-nio-9088-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-22 18:43:07.592 [http-nio-9088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-22 18:43:07.598 [http-nio-9088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
