@@ -8,8 +8,19 @@
     <version>1.6.15</version>
   </parent>
   <artifactId>dbswitch-admin</artifactId>
-
   <repositories>
+    <repository>
+      <id>central</id>
+      <url>http://jfrog.boulderaitech.com/artifactory/bcenter/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+    </repository>
     <repository>
       <id>alimaven</id>
       <url>https://maven.aliyun.com/repository/public</url>
@@ -21,6 +32,18 @@
       <url>https://maven.aliyun.com/repository/public</url>
     </pluginRepository>
   </pluginRepositories>
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <name>maven-release-local</name>
+      <url>http://jfrog.boulderaitech.com/artifactory/maven_release_local/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>maven-snapshot-local</name>
+      <url>http://jfrog.boulderaitech.com/artifactory/maven_snapshot_local/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <dependencies>
     <dependency>
