@@ -1,0 +1,15 @@
+server:
+  port: 9088
+
+spring:
+  application:
+    name: dbswitch-admin
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-header-size: 8096
+
+  flyway:
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    table: DBSWITCH_SCHEMA_HISTORY
+    enabled: true
