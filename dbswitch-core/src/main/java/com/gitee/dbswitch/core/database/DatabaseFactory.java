@@ -12,7 +12,6 @@ package com.gitee.dbswitch.core.database;
 import com.gitee.dbswitch.common.type.ProductTypeEnum;
 import com.gitee.dbswitch.core.database.impl.DatabaseMysqlImpl;
 import com.gitee.dbswitch.core.database.impl.DatabaseOracleImpl;
-import com.gitee.dbswitch.core.database.impl.DatabasePostgresImpl;
 import com.gitee.dbswitch.core.database.impl.DatabaseSqlserver2000Impl;
 import com.gitee.dbswitch.core.database.impl.DatabaseSqlserverImpl;
 
@@ -37,8 +36,6 @@ public final class DatabaseFactory {
       put(ProductTypeEnum.ORACLE, DatabaseOracleImpl::new);
       put(ProductTypeEnum.SQLSERVER2000, DatabaseSqlserver2000Impl::new);
       put(ProductTypeEnum.SQLSERVER, DatabaseSqlserverImpl::new);
-      put(ProductTypeEnum.POSTGRESQL, DatabasePostgresImpl::new);
-
     }
   };
 
