@@ -12,7 +12,6 @@ package com.gitee.dbswitch.core.util;
 import com.gitee.dbswitch.common.constant.Const;
 import com.gitee.dbswitch.common.type.ProductTypeEnum;
 import com.gitee.dbswitch.core.database.AbstractDatabase;
-import com.gitee.dbswitch.core.database.DatabaseFactory;
 import com.gitee.dbswitch.core.model.ColumnDescription;
 import com.gitee.dbswitch.core.model.ColumnMetaData;
 import com.gitee.dbswitch.core.model.TableDescription;
