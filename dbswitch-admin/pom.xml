@@ -25,7 +25,7 @@
 
         <configuration>
           <includeSystemScope>true</includeSystemScope>
-          <mainClass>api.ProviderApplication</mainClass>
+          <mainClass>com.gitee.dbswitch.admin.AdminApplication</mainClass>
         </configuration>
       </plugin>
     </plugins>
