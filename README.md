@@ -1,10 +1,12 @@
-# 不同数据库DDL语句生成工具
+# 常用数据库DDL语句生成工具
 
 ## 一、工具介绍
 
 ### 1、功能描述
 
 输入源表连接信息、表名，和目标数据库类型、库表，自动生成目标库的DDL语句
+
+本项目抽取dbswitch的部分功能，在此感谢！
 
 
 ### 2、详细功能
@@ -43,7 +45,7 @@
 运行dbswitch-admin下的AdminApplication
 ![img.png](img.png)
 
-#### （2）下载jar包执行
+#### (2) 下载jar包执行
 
 默认方式启动：java -jar dbswitch-admin-1.6.15.jar
 
@@ -51,20 +53,20 @@
 
 后台启动（仅限Linux）：nohup java -jar dbswitch-admin-1.6.15.jar --server.port=9088 & 2>>1 nohup.out
 
-## 三、远程使用
+## 三、远程使用【暂不可用】
 ### 1、接口文档
 
-地址：172.16.5.165:8080/swagger-ui/
+地址：192.168.15.7:8080/swagger-ui/
 
 
 ### 1、生成单张表
 
-#### (1)配置文件
+#### (1) 配置文件
 
 ```
 {
 "type":"oracle",
-"host":"172.16.5.162",
+"host":"192.168.15.7",
 "port":1521,
 "mode":"sid",
 "user":"system",
@@ -79,11 +81,11 @@
 }
 ```
 
-#### (2)调用
+#### (2) 调用
 
-POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/table_sql
+POST 192.168.15.7:8080/dbswitch/admin/api/v1/database/table_sql
 
-#### （3）返回结果
+#### (3) 返回结果
 
 ```
     CREATE TABLE   [ljh_test
@@ -112,12 +114,12 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/table_sql
 
 ### 2、生成多张表
 
-#### (1)配置文件
+#### (1) 配置文件
 
 ```
 {
 "type":"oracle",
-"host":"172.16.5.162",
+"host":"192.168.15.7",
 "port":1521,
 "mode":"sid",
 "user":"system",
@@ -132,11 +134,11 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/table_sql
 }
 ```
 
-#### (2)调用
+#### (2) 调用
 
-POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_prefix
+POST 192.168.15.7:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_prefix
 
-#### （3）返回结果
+#### (3) 返回结果
 
 ```
         CREATE TABLE  "ljh_test"."ods_student" (
@@ -177,7 +179,7 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 > 解决办法：确定数据源信息正确，提交的内容无误。
 
 ### 2、各种数据库的写法
-#### postgresql
+#### (1) postgresql
 ```
 {
 "type":"postgresql",
@@ -185,21 +187,21 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 "port":5432,
 "mode":"",
 "user":"postgres",
-"passwd":"Zzh!@7465671",
+"passwd":"qweasd123",
 "dbname":"bigdata",
 "charset":"utf-8",
-"src_model":"wxf_test",
+"src_model":"ljh_test",
 "src_table":"ABANK",
 "target":"oracle",
 "dest_model":"ljh_test",
 "dest_table":"ods_student"
 }
 ```
-#### oracle
+#### (2) oracle
 ```
 {
 "type":"oracle",
-"host":"172.16.5.162",
+"host":"192.168.15.7",
 "port":1521,
 "mode":"sid",
 "user":"system",
@@ -213,15 +215,15 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 "dest_table_prefix":"ods_"
 }
 ```
-#### mysql
+#### (3) mysql
 ```
 {
 "type":"mysql",
-"host":"172.16.5.162",
+"host":"192.168.15.7",
 "port":3306,
 "mode":"",
 "user":"root",
-"passwd":"boulderai123",
+"passwd":"qaz123",
 "dbname":"mysql",
 "charset":"utf-8",
 "src_model":"mysql",
@@ -232,7 +234,7 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 }
 
 ```
-#### sqlserver
+#### (4) sqlserver
 ```
 {
 "type":"sqlserver",
@@ -240,7 +242,7 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 "port":1433,
 "mode":"",
 "user":"sa",
-"passwd":"boulderai123",
+"passwd":"qaz123",
 "dbname":"data_test",
 "charset":"utf-8",
 "src_model":"dbo",
@@ -254,6 +256,6 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 
 ## 五、问题反馈
 
-如果您看到并使用了本工具，或您觉得本工具对您有价值，请为此项目**点个赞**，以表示对本项目的支持，多谢！如果您在使用时遇到了bug，欢迎call me：刘金辉
+如果您看到并使用了本工具，或您觉得本工具对您有价值，请为此项目**点个赞**，以表示对本项目的支持，多谢！如果您在使用时遇到了bug，欢迎与我联系：liujinhui-ahu@foxmail.com
 
 
