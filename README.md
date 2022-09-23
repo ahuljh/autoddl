@@ -42,18 +42,10 @@
 (1) 运行dbswitch-admin下的AdminApplication
 ![img.png](img.png)
 
-## 三、本地部署使用
+## 三、远程使用
+### 1、接口文档
 
-接口文档：http://127.0.0.1:9088/swagger-ui/
-
-生成DDL路径：
-http://127.0.0.1:9088/dbswitch/admin/api/v1/database/multi_table_sql_by_union_prefix
-http://127.0.0.1:9088/dbswitch/admin/api/v1/database/table_sql
-
-也可以直接调用我的：172.16.3.24
-
-## 四、远程使用
-
+地址：172.16.5.165:8080/swagger-ui/
 
 
 ### 1、生成单张表
@@ -82,7 +74,6 @@ http://127.0.0.1:9088/dbswitch/admin/api/v1/database/table_sql
 
 POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/table_sql
 
-本地使用调用127.0.0.1:9088
 #### （3）返回结果
 
 ```

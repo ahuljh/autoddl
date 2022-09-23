@@ -79,7 +79,9 @@
           <artifactId>spring-boot-maven-plugin</artifactId>
           <configuration>
             <executable>true</executable>
+            <mainClass>com.gitee.dbswitch.admin.AdminApplication</mainClass>
           </configuration>
+
         </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
