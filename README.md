@@ -110,7 +110,7 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/table_sql
     )
 ```
 
-### 1、生成多张表
+### 2、生成多张表
 
 #### (1)配置文件
 
@@ -170,7 +170,7 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 
 ```
 
-## 五、其他要点
+## 四、其他要点
 
 ### 1、报错
 
@@ -252,7 +252,7 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 ```
 
 
-## 七、问题反馈
+## 五、问题反馈
 
 如果您看到并使用了本工具，或您觉得本工具对您有价值，请为此项目**点个赞**，以表示对本项目的支持，多谢！如果您在使用时遇到了bug，欢迎call me：刘金辉
 
