@@ -32,8 +32,8 @@ public class SwaggerConfig {
 
   public static final String API_PREFIX = "/dbswitch/admin/api";
   public static final String API_V1 = API_PREFIX + "/v1";
-  private static final String API_DEFAULT_PACKAGE = "com.gitee.dbswitch.admin.controller.privateapi";
-  private static final String API_COMMON_PACKAGE = "com.gitee.dbswitch.admin.controller.publicapi";
+  private static final String API_DEFAULT_PACKAGE = "com.gitee.dbswitch.admin.controller";
+  private static final String API_COMMON_PACKAGE = "com.gitee.dbswitch.admin.controller";
 
   private ApiInfo createApiInfo() {
     return new ApiInfoBuilder()
