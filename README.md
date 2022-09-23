@@ -40,12 +40,25 @@
 ### 2、部署
 
 (1) 运行dbswitch-admin下的AdminApplication
+![img.png](img.png)
 
-## 三、使用
+## 三、本地部署使用
 
-### 1、定义配置文件
+接口文档：http://127.0.0.1:9088/swagger-ui/
 
-#### (1)、配置文件
+生成DDL路径：
+http://127.0.0.1:9088/dbswitch/admin/api/v1/database/multi_table_sql_by_union_prefix
+http://127.0.0.1:9088/dbswitch/admin/api/v1/database/table_sql
+
+也可以直接调用我的：172.16.3.24
+
+## 四、远程使用
+
+
+
+### 1、生成单张表
+
+#### (1)配置文件
 
 ```
 {
@@ -65,11 +78,12 @@
 }
 ```
 
-#### (2)、调用
+#### (2)调用
 
-POST 127.0.0.1:9088/dbswitch/admin/api/v1/database/table_sql
+POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/table_sql
 
-### 2、返回结果
+本地使用调用127.0.0.1:9088
+#### （3）返回结果
 
 ```
     CREATE TABLE   [ljh_test
@@ -96,6 +110,65 @@ POST 127.0.0.1:9088/dbswitch/admin/api/v1/database/table_sql
     )
 ```
 
+### 1、生成多张表
+
+#### (1)配置文件
+
+```
+{
+"type":"oracle",
+"host":"172.16.5.162",
+"port":1521,
+"mode":"sid",
+"user":"system",
+"passwd":"system",
+"dbname":"helowin",
+"charset":"utf-8",
+"src_model":"TEST",
+"multi_src_table":"student,ABANK",
+"target":"oracle",
+"dest_model":"ljh_test",
+"dest_table_prefix":"ods_"
+}
+```
+
+#### (2)调用
+
+POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_prefix
+
+#### （3）返回结果
+
+```
+        CREATE TABLE  "ljh_test"."ods_student" (
+           "sid"    NUMBER,
+"sname"    NVARCHAR2(255),
+"entrance_date"    TIMESTAMP,
+"credit"    NUMBER(5,
+2),
+"sex"    NVARCHAR2(5),
+"is_delete"    INTEGER,
+"update_time"    TIMESTAMP,
+        PRIMARY KEY ("sid")
+    );
+    CREATE TABLE  "ljh_test"."ods_ABANK" (
+           "UPDTICK_0"    NUMBER,
+"CRY_0"    NVARCHAR2(3),
+"BAN_0"    NVARCHAR2(20),
+"PAB_0"    NVARCHAR2(35),
+"BIC_0"    NVARCHAR2(11),
+"PORBANCOD_0"    NVARCHAR2(10),
+"VLYSTR_0"    TIMESTAMP,
+"VLYEND_0"    TIMESTAMP,
+"CREDAT_0"    TIMESTAMP,
+"CREUSR_0"    NVARCHAR2(5),
+"UPDDAT_0"    TIMESTAMP,
+"UPDUSR_0"    NVARCHAR2(5),
+"CREDATTIM_0"    TIMESTAMP,
+"UPDDATTIM_0"    TIMESTAMP,
+"AUUID_0"    BLOB
+    );
+
+```
 
 ## 五、常见问题解决
 
