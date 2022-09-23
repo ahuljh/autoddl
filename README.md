@@ -39,8 +39,14 @@
 
 ### 2、部署
 
-(1) 运行dbswitch-admin下的AdminApplication
+(1) 下载代码执行
+运行dbswitch-admin下的AdminApplication
 ![img.png](img.png)
+
+（2）下载jar包执行
+默认方式启动：java -jar dbswitch-admin-1.6.15.jar
+指定端口启动：java -jar dbswitch-admin-1.6.15.jar --server.port=9088
+后台启动（仅限Linux）：nohup java -jar dbswitch-admin-1.6.15.jar --server.port=9088 & 2>>1 nohup.out
 
 ## 三、远程使用
 ### 1、接口文档
