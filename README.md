@@ -161,11 +161,86 @@ POST 172.16.5.165:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 
 ```
 
-## 五、常见问题解决
+## 五、其他要点
 
 ### 1、报错
 
 > 解决办法：确定数据源信息正确，提交的内容无误。
+
+### 2、各种数据库的写法
+#### postgresql
+```
+{
+"type":"postgresql",
+"host":"172.16.5.66",
+"port":5432,
+"mode":"",
+"user":"postgres",
+"passwd":"Zzh!@7465671",
+"dbname":"bigdata",
+"charset":"utf-8",
+"src_model":"wxf_test",
+"src_table":"ABANK",
+"target":"oracle",
+"dest_model":"ljh_test",
+"dest_table":"ods_student"
+}
+```
+#### oracle
+```
+{
+"type":"oracle",
+"host":"172.16.5.162",
+"port":1521,
+"mode":"sid",
+"user":"system",
+"passwd":"system",
+"dbname":"helowin",
+"charset":"utf-8",
+"src_model":"TEST",
+"multi_src_table":"student,ABANK",
+"target":"oracle",
+"dest_model":"ljh_test",
+"dest_table_prefix":"ods_"
+}
+```
+#### mysql
+```
+{
+"type":"mysql",
+"host":"172.16.5.162",
+"port":3306,
+"mode":"",
+"user":"root",
+"passwd":"boulderai123",
+"dbname":"mysql",
+"charset":"utf-8",
+"src_model":"mysql",
+"src_table":"db",
+"target":"oracle",
+"dest_model":"ljh_test",
+"dest_table":"ods_student"
+}
+
+```
+#### sqlserver
+```
+{
+"type":"sqlserver",
+"host":"LIUJINHUI",
+"port":1433,
+"mode":"",
+"user":"sa",
+"passwd":"boulderai123",
+"dbname":"data_test",
+"charset":"utf-8",
+"src_model":"dbo",
+"src_table":"ICBOM",
+"target":"oracle",
+"dest_model":"ljh_test",
+"dest_table":"ods_student"
+}
+```
 
 
 ## 七、问题反馈
