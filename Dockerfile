@@ -4,4 +4,4 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 ADD dbswitch-admin/target/dbswitch-admin-*.jar /app.jar
 
-ENTRYPOINT ["sh","-c","java -jar -Dfile.encoding=UTF-8 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap /app.jar"]
+ENTRYPOINT ["sh","-c","java -jar -Dfile.encoding=UTF-8 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap --server.port=9088 /app.jar"]
