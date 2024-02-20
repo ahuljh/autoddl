@@ -53,10 +53,13 @@
 
 后台启动（仅限Linux）：nohup java -jar dbswitch-admin-1.6.15.jar --server.port=9088 & 2>>1 nohup.out
 
-## 三、远程使用【暂不可用】
-### 1、接口文档
+## 三、远程使用
 
-地址：192.168.15.7:8080/swagger-ui/
+- 示例接口后续将放在：dbswitch-admin/src/test/resources/下，如sink_mysql.http
+
+### 1、接口文档（需本地启动）
+
+地址：127.0.0.1:9088/swagger-ui/
 
 
 ### 1、生成单张表
@@ -258,4 +261,5 @@ POST 192.168.15.7:8080/dbswitch/admin/api/v1/database/multi_table_sql_by_union_p
 
 如果您看到并使用了本工具，或您觉得本工具对您有价值，请为此项目**点个赞**，以表示对本项目的支持，多谢！如果您在使用时遇到了bug，欢迎与我联系：liujinhui-ahu@foxmail.com
 
+欢迎贡献！
 
