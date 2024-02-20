@@ -42,7 +42,7 @@ public final class GenerateSqlUtils {
         primaryKeys,
         schemaName,
         tableName,
-        false,
+        true,
         null,
         autoIncr);
   }
