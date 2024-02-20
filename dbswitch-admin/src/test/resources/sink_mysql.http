@@ -1,0 +1,19 @@
+POST {{url}}/database/table_sql
+Content-Type:application/json
+Cookie:{{Cookie}}
+
+{
+    "type": "mysql",
+    "host": "172.16.5.165",
+    "port": 3306,
+    "mode": "",
+    "user": "root",
+    "passwd": "root",
+    "dbname": "hmall",
+    "charset": "utf-8",
+    "src_model": "hmall",
+    "src_table": "item",
+    "target": "mysql",
+    "dest_model": "ods",
+    "dest_table": "ods_yhgl_"
+}
